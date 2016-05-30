@@ -1,0 +1,367 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+html {
+  font-size: 1rem; }
+
+body {
+  background-color: white;
+  font-family: 'Dosis';
+  font-weight: 400;
+  line-height: 1.618;
+  color: #333; }
+
+p {
+  margin-bottom: 1.3rem;
+  line-height: 1.618; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.4rem; } }
+
+h1 {
+  font-size: 2.441em; }
+
+h2 {
+  font-size: 1.953em; }
+
+h3 {
+  font-size: 1.563em; }
+
+h4 {
+  font-size: 1.25em; }
+
+small,
+.font_small {
+  font-size: 0.8em; }
+
+@media (min-width: 425px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 1.414rem 0 0.5rem;
+    font-weight: inherit; }
+  h1 {
+    font-size: 3.157rem; }
+  h2 {
+    font-size: 2.369rem; }
+  h3 {
+    font-size: 1.777rem; }
+  h4 {
+    font-size: 1.333rem; }
+  small,
+  .font_small {
+    font-size: 0.75rem; } }
+
+* {
+  box-sizing: border-box; }
+
+.grid {
+  max-width: 62.18rem;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .grid {
+      padding: 1.25rem; } }
+  .grid .grid {
+    padding: 0; }
+
+.center > * {
+  margin-left: auto;
+  margin-right: auto; }
+
+r
+.column {
+  float: none !important; }
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.row > * {
+  float: left; }
+  .row > *:last-child:not(:first-child) {
+    float: right; }
+
+.s-full {
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.s-2 {
+  width: 16.66667%; }
+
+.s-3 {
+  width: 25%; }
+
+.s-4 {
+  width: 33.33333%; }
+
+.s-5 {
+  width: 41.66667%; }
+
+.s-6 {
+  width: 50%; }
+
+.s-7 {
+  width: 58.33333%; }
+
+.s-8 {
+  width: 66.66667%; }
+
+.s-9 {
+  width: 75%; }
+
+.s-10 {
+  width: 83.33333%; }
+
+@media (max-height: 48rem) {
+  .show-for-medium-up {
+    display: none; } }
+
+@media (min-width: 48rem) {
+  .show-for-medium-up {
+    display: block; }
+  .m-full {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .m-2 {
+    width: 16.66667%; }
+  .m-3 {
+    width: 25%; }
+  .m-4 {
+    width: 33.33333%; }
+  .m-5 {
+    width: 41.66667%; }
+  .m-6 {
+    width: 50%; }
+  .m-7 {
+    width: 58.33333%; }
+  .m-8 {
+    width: 66.66667%; }
+  .m-9 {
+    width: 75%; }
+  .m-10 {
+    width: 83.33333%; } }
+
+/* Large screens */
+@media (min-width: 60rem) {
+  .l-full {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .l-2 {
+    width: 16.66667%; }
+  .l-3 {
+    width: 25%; }
+  .l-4 {
+    width: 33.33333%; }
+  .l-5 {
+    width: 41.66667%; }
+  .l-6 {
+    width: 50%; }
+  .l-7 {
+    width: 58.33333%; }
+  .l-8 {
+    width: 66.66667%; }
+  .l-9 {
+    width: 75%; }
+  .l-10 {
+    width: 83.33333%; } }
+
+svg.head .piece-animation {
+  -webkit-animation: fade-out 2s ease-in-out;
+  animation: fade-out 2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-webkit-keyframes fade-out {
+  to {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  to {
+    opacity: 0; } }
+
+.breath {
+  -webkit-animation: breath 7s ease-in-out infinite;
+  animation: breath 7s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+
+@-webkit-keyframes breath {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45%,
+  50% {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes breath {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  45%,
+  50% {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+svg.menu {
+  display: none; }
+  svg.menu * {
+    stroke: white; }
+  svg.menu image {
+    opacity: 0; }
+  svg.menu path {
+    fill: transparent; }
+
+.stroke-animation {
+  display: block;
+  -webkit-animation: dash 4s linear;
+  animation: dash 4s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.fill-white, .fill-purple, .fill-image, .stroke-out {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
+
+.fill-white {
+  -webkit-animation-name: fill-white;
+  animation-name: fill-white; }
+
+.fill-purple {
+  -webkit-animation-name: fill-purple;
+  animation-name: fill-purple; }
+
+.fill-image {
+  -webkit-animation-name: fill-image;
+  animation-name: fill-image; }
+
+.stroke-out {
+  -webkit-animation-name: stroke-out;
+  animation-name: stroke-out; }
+
+@-webkit-keyframes stroke-out {
+  to {
+    stroke-width: 0; } }
+
+@keyframes stroke-out {
+  to {
+    stroke-width: 0; } }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes fill-image {
+  to {
+    opacity: 1; } }
+
+@keyframes fill-image {
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fill-purple {
+  to {
+    fill: #CC3579; } }
+
+@keyframes fill-purple {
+  to {
+    fill: #CC3579; } }
+
+@-webkit-keyframes fill-white {
+  from {
+    stroke: white; }
+  to {
+    fill: white; } }
+
+@keyframes fill-white {
+  from {
+    stroke: white; }
+  to {
+    fill: white; } }
+
+.panel .item {
+  position: relative; }
+  .panel .item .caption {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600; }
+
+.panel img {
+  display: block;
+  width: 100%; }
+
+.panel .item {
+  float: left; }
+
+.panel .sizer, .panel .item {
+  width: 50%; }
+  @media (min-width: 670px) {
+    .panel .sizer, .panel .item {
+      width: 33.33333%; } }
+
+.stars {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden; }
+
+.title {
+  color: #F2543B; }
+
+.svg {
+  margin: auto;
+  position: relative;
+  width: 90%;
+  z-index: 1; }
+  @media (min-width: 400px) {
+    .svg {
+      width: 85%; } }
+  @media (min-width: 500px) {
+    .svg {
+      width: 75%; } }
+  @media (min-width: 600px) {
+    .svg {
+      width: 65%; } }
+  @media (min-width: 700px) {
+    .svg {
+      width: 60%; } }
+  @media (min-width: 800px) {
+    .svg {
+      width: 55%; } }
+  @media (min-width: 960px) {
+    .svg {
+      width: 45%; } }
+  @media (min-width: 1100px) {
+    .svg {
+      width: 32%; } }
+  @media (orientation: landscape) and (max-width: 600px) {
+    .svg {
+      width: 45%; } }
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
