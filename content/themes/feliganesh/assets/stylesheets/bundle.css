@@ -166,47 +166,24 @@ r
     width: 83.33333%; } }
 
 svg.head .piece-animation {
-  -webkit-animation: fade-out 2s ease-in-out;
   animation: fade-out 2s ease-in-out;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
-
-@-webkit-keyframes fade-out {
-  to {
-    opacity: 0; } }
 
 @keyframes fade-out {
   to {
     opacity: 0; } }
 
 .breath {
-  -webkit-animation: breath 7s ease-in-out infinite;
   animation: breath 7s ease-in-out infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate; }
-
-@-webkit-keyframes breath {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  45%,
-  50% {
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
 
 @keyframes breath {
   0% {
-    -webkit-transform: scale(1);
     transform: scale(1); }
   45%,
   50% {
-    -webkit-transform: scale(1.08);
     transform: scale(1.08); }
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1); } }
 
 svg.menu {
@@ -220,72 +197,41 @@ svg.menu {
 
 .stroke-animation {
   display: block;
-  -webkit-animation: dash 4s linear;
   animation: dash 4s linear;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
 .fill-white, .fill-purple, .fill-image, .stroke-out {
-  -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out; }
 
 .fill-white {
-  -webkit-animation-name: fill-white;
   animation-name: fill-white; }
 
 .fill-purple {
-  -webkit-animation-name: fill-purple;
   animation-name: fill-purple; }
 
 .fill-image {
-  -webkit-animation-name: fill-image;
   animation-name: fill-image; }
 
 .stroke-out {
-  -webkit-animation-name: stroke-out;
   animation-name: stroke-out; }
-
-@-webkit-keyframes stroke-out {
-  to {
-    stroke-width: 0; } }
 
 @keyframes stroke-out {
   to {
     stroke-width: 0; } }
 
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0; } }
-
-@-webkit-keyframes fill-image {
-  to {
-    opacity: 1; } }
 
 @keyframes fill-image {
   to {
     opacity: 1; } }
 
-@-webkit-keyframes fill-purple {
-  to {
-    fill: #CC3579; } }
-
 @keyframes fill-purple {
   to {
     fill: #CC3579; } }
-
-@-webkit-keyframes fill-white {
-  from {
-    stroke: white; }
-  to {
-    fill: white; } }
 
 @keyframes fill-white {
   from {
@@ -320,13 +266,42 @@ svg.menu {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
 
 .title {
   color: #F2543B; }
+
+nav {
+  background: #ffd3b8; }
+  nav .content {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0 !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 1rem;
+    color: black; }
+    nav .content a {
+      text-decoration: none; }
+      nav .content a:link, nav .content a:visited {
+        color: inherit; }
+    nav .content .breath {
+      width: 8%;
+      margin: 0; }
+      nav .content .breath .head {
+        position: static;
+        transform: translate(0%);
+        top: 0; }
+    nav .content li {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 1.25rem; }
 
 .svg {
   margin: auto;
@@ -363,5 +338,4 @@ svg {
   top: 50%;
   left: 50%;
   width: 100%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }

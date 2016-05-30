@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 @import '../components/**/*.scss';
-
-
 .stars {
   width: 100vw;
   height: 100vh;
@@ -9,13 +7,49 @@
   display: flex;
   overflow: hidden;
 }
-
-.title{
+.title {
   color: $c1;
 }
+nav {
+  background: hsl(23, 100%, 86%);
 
 
+  .content {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0 !important;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    color: black;
+    a {
+      text-decoration: none;
+      &:link,
+      &:visited {
+        color: inherit;
+      }
+    }
+    .breath {
+
+      width: 8%;
+      margin: 0;
+
+      .head{
+        position: static;
+        transform: translate(0%);
+        top:0;
+
+      }
+    }
+    li {
+      display: inline-block;
+      margin-left: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+}
 .svg {
   margin: auto;
   position: relative;
@@ -46,7 +80,6 @@
     width: 45%;
   }
 }
-
 svg {
   position: absolute;
   top: 50%;
