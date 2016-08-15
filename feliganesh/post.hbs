@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+
+{{#post}}  
+
+  <!--Filtering content-->
+  {{#has tag="blog"}}
+    {{> blog-post id=this.id title=this.title content=this.content image=this.image published_at=this.published_at author=this.author author_url=this.author.url}}
+  {{/has}}
+
+
+  {{#has tag="portfolio"}}
+    {{> portfolio-post title=this.title content=this.content image=this.image}}
+  {{/has}}
+
+{{/post}}
+
+
+</html>
