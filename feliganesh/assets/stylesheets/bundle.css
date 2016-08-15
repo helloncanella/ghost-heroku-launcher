@@ -131,7 +131,7 @@ body#blog #post .footer {
     body#blog #post .footer .author-details .content .more a {
       color: inherit; }
 
-body#blog main#authors-list .profile .content {
+body#blog main#authors-list .profile {
   margin-bottom: 2rem; }
 
 body#blog main#author a, body#blog main#authors-list a {
