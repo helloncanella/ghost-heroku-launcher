@@ -1,56 +1,19 @@
-var timeOut;
-var ON = false;
 
-$('document').ready(function() {
-  // sparkle();
-});
+// console.log('hello')
 
-$(document).keypress(function(e){
-  var letter = String.fromCharCode(e.which);
-
-  if(letter == "o"){
-    
-    if(ON){
-      $('canvas').remove();
-      ON = false;
-    }else{
-      sparkle();
-      ON=true;
-    }
-  }
-
+var app = angular.module("app", ['ngRoute']).
+  config(function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+    $routeProvider.
+      when("/", { 
+          template: "<div></div>",
+          controller: function(){
+              window.location.replace('/portfolio')
+          } 
+        }).
+      otherwise( { redirectTo: "/portfolio" });
 })
 
 
-$(window).on('resize', function() {
-  if(ON){
-    clearTimeout(timeOut);
-    timeOut = setTimeout(sparkle, 250);
-  }  
-});
 
-$(document).on('endHeadAnimation', function() {
-  $('canvas').remove();
-  ON=false;
-});
-
-function sparkle() {
-
-  $('canvas').remove();
-
-  var stars = $('.stars');
-
-  var options = {
-    color: "#FFFFFF",
-    count: 700,
-    overlap: 0,
-    speed: 0,
-    minSize: 2,
-    maxSize: 5,
-    direction: "both"
-  }
-
-  stars.sparkle(options);
-  stars.trigger("start.sparkle");
-
-}
+;

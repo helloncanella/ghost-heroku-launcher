@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    {{> head}}
+    <body id="blog" ng-app="masonryModule">
+        {{> blog-aside}}
+
+        <main>
+            <div class="grid ">
+                
+                <div class="masonry">
+                    <div class="sizer"></div>
+                    <div class="gutter"></div>
+    
+                    {{#get "posts" filter="tags:[blog]" include="author" }}
+                        {{#foreach posts}}                            
+                            {{> "loop" posts=posts}}
+                        {{/foreach}}            
+                    {{/get}}                    
+                </div>
+                <footer>
+                    {{>blog-navigation}}
+                </footer>
+            </div>
+            
+        </main> 
+    
+    </body>
+</html>
